@@ -1,0 +1,48 @@
+d1={}
+print(type(d1))
+d2={"kristal":"momo","aditi":"choewmein","pranisha":"panipuri",
+    "biraj":"pizza"}
+print(d2)
+print(d2["kristal"])
+d3={"kristal":"momo","lalitpur":{"jawlakhel":"zoo","lagankhel":"market"}}
+print(d3)
+print(d3["lalitpur"])
+print(d3["lalitpur"]["jawlakhel"])
+d3["kathmandu"]="gokarna"
+print(d3)
+del d3["kathmandu"]
+print(d3)
+print(d3.copy())
+"""d4=d3
+del d4["kristal"]
+print(d3)"""
+d5=d3.copy
+#del d5["kristal"]
+print(d3)
+print(d3["kristal"])
+print(d3.get("kristal"))
+d3.update({"dolakha":"bhimsenthan"})
+print(d3)
+print(d3.keys())
+print(d3.items())
+print(d3.values())
+d3.popitem()
+print(d3)
+#d3.pop("kristal")
+#print(d3)
+#d3.clear()
+#print(d3)
+"""y=0
+d3=d3.fromkeys(d3,y)
+print(d3)"""
+d4=(1,2,3,4,5)
+y=0
+d6=dict.fromkeys(d4,y)
+print(d6)
+d6[2]=50
+print(d6)
+x=d6.setdefault(1,20)
+print(x)
+print(d6)
+d6.setdefault("America","USA")      
+print(d6)
