@@ -38,7 +38,7 @@ class Dog(Animal,Mammal): #inherited from animal
         Mammal.sound()      #function from animal and mammal 
         print("Bark!")
 
-derived_object=Dog("tommy","germanshepherd") #only derived class constructor gets invoked
+derived_object=Dog("tommy","germanshepherd") #only derived class constructor gets invoked  #no constructor invokation order
 derived_object.sound()
 print(derived_object.var) #prints var of Animal as it is inherited first 
 
