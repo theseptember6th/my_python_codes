@@ -7,4 +7,4 @@ object1.name="shrestha"
 print(object1.name)
 object1.college="lalitpur engineering college"   #can create new variables that is not present in class
 print(object1.college)
-print(object1.__dict__)
+print(object1.__dict__) #prints whole information in dictionary
