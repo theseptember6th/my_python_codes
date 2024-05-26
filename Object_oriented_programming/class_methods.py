@@ -6,7 +6,7 @@ class kristal:
     
 
     @classmethod
-    def change_age(cls,newage):  #cls is keyword
+    def change_age(cls,newage):  #cls is keyword for class
         cls.age=newage
 
 object1=kristal()
