@@ -51,14 +51,15 @@
 
 # now for a parameter function
 def greet(fx):
-    def mfx(*args): #modified function==mfx
+    def mfx(*args,**kwargs): #modified function==mfx
         print("good morning")
-        fx(*args)
+        fx(*args,**kwargs)
         print("thank you for using this function")
-    return mfx  
+    return mfx
+@greet
 def add(a,b):
-    return a+b
-print(add(1,2))
+    print(a+b)
+add(1,2)
 #example 2
 
 # def dec1(func1):
