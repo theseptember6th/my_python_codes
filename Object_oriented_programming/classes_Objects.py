@@ -1,5 +1,5 @@
 class kristal:
-    age=20
+    age=20       #you can put values in variables,,unlike C++
     name="kristal"
 object1=kristal()  #syntax similar as function
 print(object1.name)
