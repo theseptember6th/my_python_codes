@@ -51,9 +51,9 @@ if __name__== '__main__':
     water_drinking_time=time.time()
     eyes_relaxing_time=time.time()
     physical_activity_time=time.time()
-    water_drinking_gap=4 #4 seconds
-    eyes_relaxing_gap=8  #8 seconds
-    physical_activity_gap=12 #12 seconds
+    water_drinking_gap=40*60 #reminder after 40 minutes
+    eyes_relaxing_gap=30*60  #30 minutes
+    physical_activity_gap=45*60 #45 minutes
     print("WELCOME TO HEATH REMINDER FOR PROGRAMMERS")
     try:
         while(1):
