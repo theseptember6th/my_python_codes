@@ -1,0 +1,4 @@
+*.exe
+_pycache/
+.vscode/
+tempCodeRunnerFile.py
