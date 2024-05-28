@@ -1,0 +1,6 @@
+even if i have kristal.txt in same folder as operating_system_module.py
+progam file. It cant read me as i virtually changed the operating_system_module.py program file to C drive
+thus it will cause errors
+
+
+OS module provides our code with a direct connection to the operating system. We can use its different functions to interact and do activities on our operating system. For example, if we want to create such software that needs to store or access files from a directory or folder, we can use the OS module to perform the task for us. 
