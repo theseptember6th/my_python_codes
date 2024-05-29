@@ -36,5 +36,5 @@ def soldier(path, file, format):
             os.rename(file, f"{i}{format}")
             i +=1
 
-soldier(r"C:\Users\kristal Shrestha\Desktop\my_python_codes\excercises\ex8_prettify_folder",
-        r"C:\Users\kristal Shrestha\Desktop\my_python_codes\excercises\ex8_prettify_folder\dictionaryfile.txt", ".jpg" )
+soldier(r"C:\Users\kristal Shrestha\Desktop\my_python_codes\excersies\ex8_prettify_folder",
+        r"C:\Users\kristal Shrestha\Desktop\my_python_codes\excersies\ex8_prettify_folder\dictionaryfile.txt", ".jpg" )
