@@ -2,20 +2,26 @@
 
 import requests
 import json
-def speak(str):
+
+def text_to_speech(text):
     from win32com.client import Dispatch
-    speak=Dispatch("SAPI.Spvoice")
-    speak.speak(str)
+    speaker = Dispatch("SAPI.Spvoice")
+    speaker.speak(text)
 
 if __name__ == "__main__":
-    speak("NEWS FOR TODAY")
-    url="https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=eab99b98ba37455e82e8459de446d853"
-    news=requests.get(url).text
-    news_dict=json.loads(news)
-    #print(news_dict["status"])
-    #print(news_dict["articles"])
-    arts=news_dict["articles"]
-    for article in arts:
-        speak(article["title"])
-        speak("Moving on to the next news..")
-    speak("Thanks for listening")
+    text_to_speech("NEWS FOR TODAY")
+    
+    api_key = "eab99b98ba37455e82e8459de446d853"
+    news_url = f"https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey={api_key}"
+    
+    response = requests.get(news_url)
+    news_data = response.json()
+    
+    articles = news_data["articles"]
+    
+    for article in articles:
+        title = article["title"]
+        text_to_speech(title)
+        text_to_speech("Moving on to the next news..")
+    
+    text_to_speech("Thanks for listening")
