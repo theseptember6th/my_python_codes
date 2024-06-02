@@ -51,6 +51,6 @@ except Exception as c:
     print(c)
     if name=="kristal":
         raise ValueError("Kristal username is blocked,please try another one")
-    print("Exception handled sucessfully")
+        #program ends here
 
 print("system runned sucessfully without raise")
