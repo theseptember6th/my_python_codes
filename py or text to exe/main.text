@@ -1,0 +1,4 @@
+print("add any two numbers")
+x=int(input())
+y=int(input())
+print(x+y)
