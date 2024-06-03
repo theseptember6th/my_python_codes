@@ -1,0 +1,77 @@
+Parsing in Python refers to the process of analyzing a string or a block of text to extract useful information or convert it into a structured format that a program can use. Parsing can be applied to various types of data such as JSON, XML, HTML, or even custom file formats. The goal is to transform the input text into a more usable form, often as data structures like dictionaries, lists, or objects.
+
+Here are a few common examples of parsing in Python:
+
+Parsing JSON Data: JSON (JavaScript Object Notation) is a common data format used for API responses and configuration files. Python provides the json module to parse JSON strings into Python dictionaries.
+
+import json
+
+json_string = '{"name": "Alice", "age": 30, "city": "Wonderland"}'
+data = json.loads(json_string)
+print(data)
+# Output: {'name': 'Alice', 'age': 30, 'city': 'Wonderland'}
+
+
+
+In summary, parsing in Python involves converting text data into a more structured format that can be easily manipulated and analyzed within a program. Various libraries and modules are available to facilitate parsing different types of data.
+
+
+Unparsing JSON data, also known as serializing or encoding, involves converting a Python data structure back into a JSON string. This can be done using the json.dumps() function provided by the json module. Here is an example that continues from the previous parsing example:
+
+
+import json
+
+# Parsing JSON Data
+json_string = '{"name": "Alice", "age": 30, "city": "Wonderland"}'
+data = json.loads(json_string)
+print(data)
+# Output: {'name': 'Alice', 'age': 30, 'city': 'Wonderland'}
+
+# Unparsing (Serializing) Python Dictionary back to JSON string
+json_data = json.dumps(data)
+print(json_data)
+# Output: {"name": "Alice", "age": 30, "city": "Wonderland"}
+
+
+Here are a few additional points and options you can use with json.dumps():
+
+Pretty Printing: To make the JSON output more readable, you can use the indent parameter.
+pretty_json_data = json.dumps(data, indent=4)
+print(pretty_json_data)
+# Output:
+# {
+#     "name": "Alice",
+#     "age": 30,
+#     "city": "Wonderland"
+# }
+
+
+
+Sorting Keys: To output the JSON with keys sorted alphabetically, you can use the sort_keys parameter.
+
+sorted_json_data = json.dumps(data, sort_keys=True)
+print(sorted_json_data)
+# Output: {"age": 30, "city": "Wonderland", "name": "Alice"}
+
+
+Handling Non-Standard Data Types: By default, json.dumps() can only serialize standard Python data types (like dictionaries, lists, strings, numbers, booleans, and None). If you need to serialize custom objects or other data types, you can provide a custom serialization function using the default parameter.
+
+from datetime import datetime
+
+def custom_serializer(obj):
+    if isinstance(obj, datetime):
+        return obj.isoformat()
+    raise TypeError("Type not serializable")
+
+data_with_date = {
+    "name": "Alice",
+    "age": 30,
+    "city": "Wonderland",
+    "joined": datetime(2024, 6, 3, 12, 30)
+}
+
+json_data_with_date = json.dumps(data_with_date, default=custom_serializer)
+print(json_data_with_date)
+# Output: {"name": "Alice", "age": 30, "city": "Wonderland", "joined": "2024-06-03T12:30:00"} 
+
+Using json.dumps() allows you to convert Python objects into JSON strings, which can be useful for storing data in a JSON file, sending data over a network, or any other situation where JSON is required.
