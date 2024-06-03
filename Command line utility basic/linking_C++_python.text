@@ -1,0 +1,71 @@
+Certainly! Below is a simple example demonstrating how you can link a C++ program with a Python script using a command-line interface. We will create a Python script that takes arguments from the command line, and a C++ program that calls this Python script using these arguments.
+
+Python Script: script.py
+python
+Copy code
+# script.py
+import argparse
+
+def main():
+    parser = argparse.ArgumentParser(description='A simple CLI for demonstration')
+    parser.add_argument('number', type=int, help='A number to be doubled')
+    
+    args = parser.parse_args()
+    
+    result = args.number * 2
+    print(result)
+
+if __name__ == "__main__":
+    main()
+
+
+
+// main.cpp
+#include <iostream>
+#include <cstdlib>
+
+using namespace std;
+
+int main() {
+    int number = 5;
+    string command = "python3 script.py " + to_string(number);
+    system(command.c_str());
+    return 0;
+}
+
+Explanation
+Python Script (script.py):
+
+The script uses argparse to parse a single integer argument from the command line.
+It then doubles the number and prints the result.
+C++ Program (main.cpp):
+
+The C++ program defines a number (number = 5).
+It constructs a command string to call the Python script with this number as an argument.
+The system() function is used to execute this command.
+Steps to Run the Example
+Create the Python Script:
+
+Save the Python code in a file named script.py.
+Create the C++ Program:
+
+Save the C++ code in a file named main.cpp.
+Compile the C++ Program:
+
+sh
+Copy code
+g++ main.cpp -o main
+Run the C++ Program:
+
+sh
+Copy code
+./main
+When you run the C++ program, it will call the Python script with the argument 5, and you should see the output 10 printed to the console.
+
+This example demonstrates the basic idea of using a C++ program to call a Python script with command-line arguments, showcasing how to link the two languages for simple interoperation.
+
+
+
+
+
+

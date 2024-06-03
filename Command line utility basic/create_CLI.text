@@ -1,0 +1,77 @@
+Steps to Create a Command-Line Interface
+Import the argparse module:
+First, we need to import the argparse module in our script.
+
+python
+import argparse
+Create the parser:
+We create a parser object which will handle the command-line arguments.
+
+python
+parser = argparse.ArgumentParser(description="Your program description here")
+Add arguments:
+We add the arguments that our script can accept. These can be optional or positional.
+
+Positional arguments: These are required and must be provided in a specific order.
+python
+parser.add_argument('input', help="Input file")
+Optional arguments: These are not required and can be provided in any order. They usually start with a dash (-).
+python
+parser.add_argument('-o', '--output', help="Output file")
+Parse the arguments:
+We parse the arguments provided by the user when they run the script. This step processes the command-line input.
+
+python
+args = parser.parse_args()
+Access the arguments:
+The parsed arguments are stored in a Namespace object. We can access them as properties of this object.
+
+python
+input_file = args.input
+output_file = args.output
+Example Code
+Here's a complete example that brings all these steps together:
+
+python
+import argparse
+
+# Step 2: Create the parser
+parser = argparse.ArgumentParser(description="Process some files.")
+
+# Step 3: Add arguments
+# Positional argument
+parser.add_argument('input', help="Input file")
+
+# Optional argument
+parser.add_argument('-o', '--output', help="Output file", default="output.txt")
+
+# Step 4: Parse the arguments
+args = parser.parse_args()
+
+# Step 5: Access the arguments
+input_file = args.input
+output_file = args.output
+
+print(f"Input file: {input_file}")
+print(f"Output file: {output_file}")
+Running the Script
+If you save the above code in a file called script.py and run it from the command line, you can provide arguments like this:
+
+sh
+python script.py my_input_file.txt -o my_output_file.txt
+This will output:
+
+yaml
+Input file: my_input_file.txt
+Output file: my_output_file.txt
+If you don't provide the -o argument, it will use the default value "output.txt":
+
+sh
+python script.py my_input_file.txt
+This will output:
+
+yaml
+Input file: my_input_file.txt
+Output file: output.txt
+By following these steps, you can create a flexible and user-friendly command-line interface for your Python scripts using the argparse module.
+
