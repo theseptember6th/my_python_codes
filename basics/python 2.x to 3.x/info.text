@@ -1,0 +1,30 @@
+an issue or a question that most of the viewers who are new to programming or the viewers who are programming in the older version of Python have in mind. The purpose of this tutorial is to provide them with a clear understanding of where they should start learning from and help them decide whether they should start learning from python 2.x or 3.x. 
+
+As we know that with every new update, the bugs in the previous ones are resolved, and also new features are included, or previous ones are improved for the benefit of the users. However, along with all these advantages, sometimes a few functions that were not that good are replaced or are completely erased, and sometimes the implementation techniques change a little bit. All these scenarios that create problems for users need to be upgraded from one version to another. 
+
+What are the differences between Python 2 and Python 3?
+The most common example we can take of such a scenario is the print statement. In Python 2.x, the print statement does not need a pair of parentheses. It just needed two single quotes to implement. While in 3.x, we have to write the quotes in double quotations inside the parenthesis. 
+
+#Python 2:
+print "Hello world!"
+
+#Python 3:
+print ("Hello world!")
+Another major syntax difference is the raw_input() function has changed. This is a common function that takes input from the user.
+
+#Python 2: 
+user_input1 = raw_input(“entered_value”)
+
+#Python 3:
+user_input1 = input(“entered_value”)
+Python 3.x offers a range () function to perform iterations whereas, In Python 2.x, the xrange() is used for iterations.
+
+There are also some other differences like Python 3 default storing of strings is Unicode. In contrast, Python 2 stores need to define Unicode string value with "u.", and Python 3 exceptions should be enclosed in parenthesis while Python 2 exceptions should be enclosed in notations.
+
+So, concluding the first purpose of this lecture, I would recommend new users to start learning from the latest version. It contains all the newly updated functions and methods, along with new modules or ways of programming. And after some time, most of the applications and software also update themselves according to the latest version. 
+
+How to convert code from Python 2.x to Python 3.x?
+In the case of developers that are associated with the previous versions, the scenario poses some questions. When a new update arrives, all the applications, software are not updated readily according to the new update, but it takes some time. Also, developers sometimes have to choose where they should keep working with the same update or set their code according to the newer update. Now converting all the code by writing it again can be very hectic and time-consuming in the case of programs with a larger number of the code. For such a scenario, Python has introduced a guide by following which we can make our code compatible for both 2.x or 3.x or convert it from 2.x to 3.x. You can visit the Python official documentation site for further explanation and guidelines.
+https://docs.python.org/3/howto/pyporting.html
+
+Before converting your code, you should read all the guidelines carefully and interact with an expert for consultation prior to the conversion. If not done properly, the conversion can cause many bugs and security breaches in your program, so it is best to be safe than sorry. Many computers come with Python 2.7 pre-installed by default, but it's worth it to learn how to install and use Python 3.
