@@ -1,0 +1,7 @@
+Licence.txt
+setup.py
+packagekristal/__init__.py
+packagekristal.egg-info/PKG-INFO
+packagekristal.egg-info/SOURCES.txt
+packagekristal.egg-info/dependency_links.txt
+packagekristal.egg-info/top_level.txt

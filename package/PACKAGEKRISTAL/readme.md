@@ -1,0 +1,3 @@
+© 2024 Kristal. All Rights Reserved.
+
+This content, including but not limited to text, images, and any other media, is the property of Kristal and is protected by international copyright laws. Unauthorized use, reproduction, or distribution of this material without explicit written permission from the copyright owner is strictly prohibited. For permissions or licensing requests, please contact shresthakristal42@gmail.com.
