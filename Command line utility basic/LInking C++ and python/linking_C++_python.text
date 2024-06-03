@@ -55,11 +55,11 @@ Compile the C++ Program:
 sh
 Copy code
 g++ main.cpp -o main
-Run the C++ Program:
+Run the C++ Progsram:
 
 sh
 Copy code
-./main
+./main.exe
 When you run the C++ program, it will call the Python script with the argument 5, and you should see the output 10 printed to the console.
 
 This example demonstrates the basic idea of using a C++ program to call a Python script with command-line arguments, showcasing how to link the two languages for simple interoperation.
