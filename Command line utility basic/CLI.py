@@ -14,7 +14,7 @@ def calc(args):
         return "something went wrong"
 
 if __name__ == '__main__':
-    parser=argparse.ArgumentParser('''
+    parser=argparse.ArgumentParser(description='''
 WELCOME TO COMMAND LINE INTERFACE
 FOR CALCULATOR
 write in command line: --x "number1" --y "number2" --o add
